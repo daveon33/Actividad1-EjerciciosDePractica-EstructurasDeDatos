@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -12,17 +13,22 @@ public class Main {
         // Se define scanner para tomar datos por consola
         Scanner scanner = new Scanner(System.in);
 
+        int arreglosLlenos = 0;
 
-        System.out.println("Por favor ingrese uno por uno los 7 valores del primer arreglo, " +
-                "solo números serán válidos: ");
-        for(int i = 0; i < 7; i++) {
-            System.out.println("Dígito " + (i + 1) + ": ");
-            primerArreglo[i] = scanner.nextInt();
+        while(arreglosLlenos < 2) {
+            System.out.println("Por favor ingrese uno por uno los 7 valores del arreglo " + (arreglosLlenos + 1) +
+                    " solo números serán válidos: ");
+            for(int i = 0; i < 7; i++) {
+                System.out.println("Dígito " + (i + 1) + ": ");
+
+                if(arreglosLlenos == 0) {
+                    primerArreglo[i] = scanner.nextInt();
+                } else{
+                    segundoArreglo[i] = scanner.nextInt();
+                }
+            }
+            arreglosLlenos++;
         }
-
-
-
-
 
     }
 }
