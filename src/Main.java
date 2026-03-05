@@ -38,7 +38,7 @@ public class Main {
 
         promedio /= 7;
         System.out.println("El promedio del los números del tercer arreglo es de: " + promedio);
-
+        System.out.println("Los datos presentes en el tercer arreglo son: " + Arrays.toString(tercerArreglo));
 
 
 
