@@ -13,6 +13,7 @@ public class Main {
         // Se define scanner para tomar datos por consola
         Scanner scanner = new Scanner(System.in);
 
+        double promedio = 0;
         int arreglosLlenos = 0;
 
         while(arreglosLlenos < 2) {
@@ -29,6 +30,17 @@ public class Main {
             }
             arreglosLlenos++;
         }
+
+        for(int i = 0; i < 7; i++) {
+            tercerArreglo[i] = primerArreglo[i] - segundoArreglo[i];
+            promedio += tercerArreglo[i];
+        }
+
+        promedio /= 7;
+        System.out.println("El promedio del los números del tercer arreglo es de: " + promedio);
+
+
+
 
     }
 }
